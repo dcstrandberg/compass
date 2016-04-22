@@ -1,0 +1,45 @@
+body {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eeeeee;
+    margin: 0px;
+    padding: 0px;
+}
+#distance {
+    width: 100%;
+    height: auto;
+    font-size: xx-large;
+    color: #000050;
+    text-align: center; 
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /*margin: 0px;*/  
+}
+#buttonbar {
+    width: 100%;
+    border-top: 3px solid #000050;
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    /*padding: 0px;
+    margin: 0px;*/
+}
+button {
+    width: 50%;
+    height: 200px;
+    border: 1px solid #000050;
+    font-size: 48px;
+
+}
+button.inactive {
+    background-color: #eeeeee;
+    color: #BB4c30;
+}
+button.active {
+    background-color: #BB4c30;
+    color: #eeeeee;
+}
+/*button:active {
+    background-color: #881c00;
+    color: #ffffff;
+}*/
