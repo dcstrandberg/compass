@@ -1,12 +1,12 @@
 
 
-var lat, long, i=0, htmlText = "", distance = null, watchID;
+var i=0, watchID;
 var demoRef = document.getElementById("demo");
 
 var homeLat = 44.940601, homeLong = -93.156662;
 var settings = {
-    enableHighAccuracy: true,
-    timeout: 10000,
+    enableHighAccuracy: false,
+    timeout: 4000,
     maximumAge: 0
 };
 
