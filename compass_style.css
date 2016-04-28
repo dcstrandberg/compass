@@ -36,6 +36,10 @@ button {
     height: 200px;
     border: 1px solid #000050;
     font-size: 48px;
+
+    background-color: #eeeeee;
+    color: #BB4c30;
+
     /*No double outline from browser around selected button*/
     outline: none;
     /*Button changes are gradual instead of instant*/
@@ -43,10 +47,10 @@ button {
     -moz-transition: background-color 0.4s, color 0.4s;
     transition: background-color 0.4s, color 0.4s;
 }
-button.inactive {
+/*button.inactive {
     background-color: #eeeeee;
     color: #BB4c30;
-}
+}*/
 button.active {
     background-color: #BB4c30;
     color: #eeeeee;

@@ -4,7 +4,6 @@
     <link rel="stylesheet" type="text/css" href="compass_style.css">
     <!--Call Angular Library-->
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<script src="compass.js"></script>
 </head>
     
 <body data-ng-app="distApp" data-ng-controller="distCtrl">
@@ -17,6 +16,14 @@
 <button id="on" class="{{onClass}}" ng-click="on()">On</button>
 <button id="off" class="{{offClass}}" ng-click="off()">Off</button>
 </div>
+
+<script>
+    var app = angular.module('distApp', []);
+    app.controller('distCtrl', function($scope) {
+       $scope.distance = (84.2 + " m");
+        
+    });
+</script>
 
 </body>
 </html>
