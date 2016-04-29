@@ -7,14 +7,20 @@
 <script src="compass.js"></script>
 </head>
     
-<body data-ng-app="distApp" data-ng-controller="distCtrl">
-<!--This div creates the Angular app for this page and binds it to the controlloer distCtrl, which exists in the compass.js file-->
-<div id="distance"> 
+<body data-ng-app="discApp" data-ng-controller="discCtrl">
+<!--This div creates the Angular app for this page and binds it to the controller discCtrl, which exists in the compass.js file-->
+<div id="msgs"> 
+<ul>
+    <li data-ng-repeat="x in msgList | orderBy: 'datetime'">
+    
+    </li>
+</ul>
+
 <h1 id="demo">{{distance}}</h1>
 </div>
 
-<div id="buttonbar">
-<button id="on" class="{{onClass}}" ng-click="on()">On</button>
+<div id="keyboardBox">
+<textarea id="typeBox" data-ng-bind="typedMsg" On</button>
 <button id="off" class="{{offClass}}" ng-click="off()">Off</button>
 </div>
 

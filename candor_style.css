@@ -1,0 +1,59 @@
+body {
+    box-sizing: border-box;
+    background-color: #dddddd;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 2px ridge navy;
+    width: 100%;
+    height: 100%;
+}
+
+#keyboardBox {
+    width: 100%;
+    height: 20%;
+        
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    
+    padding: 0px;
+    margin: 0px;
+    border-top: 1px solid navy;
+    
+}
+#typeBox {
+    width: auto;
+    height: 40px;
+    
+    position: absolute;
+    top: 0px;
+    padding: 15px 7px;
+    
+    margin-left:0px;
+    /*margin-right: auto;*/
+    border-bottom: 2px solid navy;
+      
+}
+#submit {
+    background-color: #888888;
+    font-weight: bolder;
+    font-size: 1.7em;
+    border: 1px solid navy;
+    outline: none;
+    
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+    
+    width: 40px;
+    height: 40px;
+    
+    padding: 10px 7px; 
+    margin-right: 0px;
+    margin-left: auto;   
+}
+/*have a 0.2s transition for when the user clicks the submit button, it gets more transparent, then back to full again*/
+button#submit:active {
+    opacity: 0.7;
+}
