@@ -57,14 +57,6 @@ app.controller('distCtrl', function($scope, $http, distService) {
         $scope.onClass = "active";
         $scope.offClass = "inactive";
         return;
-    };
-    //Callback function for displaying the distance using geolocation object
-    $scope.showDist = function(locObj){
-        if (distService.error == 0){
-            $scope.distance = "blahblahblah";//distService.getDist(locObj);
-        } else {
-            $scope.distance = distService.error;
-        }
     };    
 
 });//End of distCtrl controller 
