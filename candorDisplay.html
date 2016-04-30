@@ -5,27 +5,30 @@
     <!--Call Angular Library-->
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script src="candor.js"></script>
+<title>Straight Talk</title>
 </head>
     
 <body data-ng-app="discApp" data-ng-controller="discCtrl">
 <!--This div creates the Angular app for this page and binds it to the controller discCtrl, which exists in the compass.js file-->
 <header>
-    <h1 id="name">{{name}}</h1>     
+    <h1 id="name">{{name.name}}:</h1>     
 </header>
 
 <ul id="list">
-    <li data-ng-repeat="x in name.msgList | orderBy: 'datetime'">
+    <li data-ng-repeat="x in name.msgList | orderBy: 'datetime'" 
+        class="{{x.msgClass}}">
         {{x.text}}
         <div class="sentTime">{{x.datetime}}</div>
     </li>
 </ul>
 
 <div id="keyboardBox">
-<textarea id="typeBox" data-ng-bind="typedMsg" />
-<button data-ng-click="sendMsg(typedMsg)" id="submit">></button>
+<input type="text" id="typeBox" data-ng-model="typedMsg" />
+<input type="submit" data-ng-click="sendMsg()"
+     id="submit" value=">" />
 <!--Eventually I need to make the send button an image-->
 <!-- This is where the keyboard goes whenever I figure that out. -->
-
+<p></p>
 </div>
 
 </body>
