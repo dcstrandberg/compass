@@ -3,7 +3,8 @@ body {
     background-color: #dddddd;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: navy;
-    overflow: auto;
+    min-height: min-content;
+    overflow-x: hidden;
 }
 header {
     width: 100%;
@@ -39,8 +40,6 @@ ul#list {
     /*border: 2px solid red;*/
     
     width: 95%;
-    min-height: min-content;
-    overflow-y: auto;
     margin: auto;
     
     display: flex;
@@ -61,6 +60,9 @@ ul#list li {
     margin-left: -10px;
     margin-right: auto;
     
+}
+ul#list li#current:empty {
+    visibility: hidden;
 }
 ul#list li.received {
     /*If the message is a received, then justify it to the right*/
