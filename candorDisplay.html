@@ -22,14 +22,15 @@
     </li>
 </ul>
 
-<div id="keyboardBox">
-<input type="text" id="typeBox" data-ng-model="typedMsg" />
-<input type="submit" data-ng-click="sendMsg()"
-     id="submit" value=">" />
+<form name="msgBox">    
+    <div id="keyboardBox">
+        <input type="text" id="typeBox" data-ng-model="typedMsg" />
+        <input type="submit" data-ng-click="sendMsg()"
+           id="submit" value=">" />
 <!--Eventually I need to make the send button an image-->
 <!-- This is where the keyboard goes whenever I figure that out. -->
-<p></p>
-</div>
+    </div>
+</form>
 
 </body>
 </html>

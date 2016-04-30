@@ -11,6 +11,7 @@ app.controller('discCtrl', function($scope, $http, $timeout){
         "msgList": []
     };
     $scope.sendMsg = function() {
+        if ($scope.typedMsg == "") {return;}
         var newMsg = {
             "text": $scope.typedMsg,
             "datetime": new Date(),

@@ -3,6 +3,7 @@ body {
     background-color: #dddddd;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: navy;
+    overflow: auto;
 }
 header {
     width: 100%;
@@ -10,6 +11,7 @@ header {
     margin: 0px;
     padding: 0px 30px;
     font-size: 150%;
+    opacity: 0.8;
     
     position: fixed;
     top: 0;
@@ -34,9 +36,11 @@ ul#list {
     position: absolute;
     left: 0;
     bottom: 200px;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     
     width: 95%;
+    min-height: min-content;
+    overflow-y: auto;
     margin: auto;
     
     display: flex;
@@ -54,13 +58,14 @@ ul#list li {
     
     padding: 5px;
     margin: 5px;
+    margin-left: -10px;
     margin-right: auto;
     
 }
 ul#list li.received {
     /*If the message is a received, then justify it to the right*/
     background-color: #bbbbbb;
-    margin-right: 5px;
+    margin-right: 20px;
     margin-left: auto;
 }
 ul#list li div.sentTime {
