@@ -2,58 +2,135 @@ body {
     box-sizing: border-box;
     background-color: #dddddd;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border: 2px ridge navy;
+    color: navy;
+}
+header {
     width: 100%;
-    height: 100%;
+    height: 80px;
+    margin: 0px;
+    padding: 0px 30px;
+    font-size: 150%;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    
+    display: flex;
+    align-items: center;
+    
+    background-color: #999999;
+    border-bottom: 3px solid navy;
+    
+}
+header h1 {
+    /*So that the extra page space will be eaten up to the right of the h1*/
+    margin-left: 30px;
+    margin-right: auto;
+}
+
+ul#list {
+    list-style: none;
+    position: absolute;
+    left: 0;
+    bottom: 200px;
+    border: 2px solid red;
+    
+    width: 95%;
+    margin: auto;
+    
+    display: flex;
+    /*So that the last message displays at bottom*/
+    flex-direction: column-reverse;
+}
+ul#list li {
+    /*display: flex;*/
+    width: 250px;
+    height: auto;
+
+    background-color: #ddbb99;
+    border: 1px solid navy;
+    border-radius: 7px;
+    
+    padding: 5px;
+    margin: 5px;
+    margin-right: auto;
+    
+}
+ul#list li.received {
+    /*If the message is a received, then justify it to the right*/
+    background-color: #bbbbbb;
+    margin-right: 5px;
+    margin-left: auto;
+}
+ul#list li div.sentTime {
+    color: #444444;
+    text-align: right;
+    font-size: small;
+    margin: 3px;
 }
 
 #keyboardBox {
     width: 100%;
-    height: 20%;
+    height: 200px;
         
     position: fixed;
     bottom: 0px;
+    left: 0px;
     display: flex;
     justify-content: flex-end;
     align-items: stretch;
     
     padding: 0px;
     margin: 0px;
-    border-top: 1px solid navy;
-    
+    /*border-top: 1px solid navy;*/
 }
 #typeBox {
-    width: auto;
-    height: 40px;
-    
-    position: absolute;
-    top: 0px;
-    padding: 15px 7px;
-    
-    margin-left:0px;
-    /*margin-right: auto;*/
-    border-bottom: 2px solid navy;
-      
-}
-#submit {
-    background-color: #888888;
-    font-weight: bolder;
-    font-size: 1.7em;
-    border: 1px solid navy;
+    width: 100%;
+    height: 30px;
+    resize: none;
+    font-size: 20px;
     outline: none;
     
-    -webkit-transition: opacity 0.2s;
-    -moz-transition: opacity 0.2s;
-    transition: opacity 0.2s;
+    padding: 5px 7px;
+    z-index: 1;
     
+    margin-left: -1px;
+    /*margin-right: auto;*/
+    background-color: #dddddd;
+    border-top: 1px solid navy;
+    border-bottom: 3px solid navy;  
+    
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+#typeBox:focus {
+    background-color: #ffbb99;
+}
+#submit {
+    background-color: navy;
+    color: #dddddd;
+    font-weight: bolder;
+    font-size: 1.7em;
+    border: 3px solid navy;
+    border-radius: 0 5px 5px 0;
+    outline: none;
+
     width: 40px;
-    height: 40px;
+    height: 44px;
+    align-items: center;
     
-    padding: 10px 7px; 
+    padding: 0px 7px; 
     margin-right: 0px;
-    margin-left: auto;   
+    margin-left: auto;  
+    
+    -webkit-transition: opacity 0.6s;
+    -moz-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+ 
 }
 /*have a 0.2s transition for when the user clicks the submit button, it gets more transparent, then back to full again*/
-button#submit:active {
-    opacity: 0.7;
+#submit:active {
+    opacity: 0.5;
 }
