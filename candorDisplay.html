@@ -18,7 +18,7 @@
     <li data-ng-repeat="x in name.msgList | orderBy: 'datetime'" 
         class="{{x.msgClass}}">
         {{x.text}}
-        <div class="sentTime">{{x.datetime}}</div>
+        <div class="sentTime">{{x.datetime | date:'short'}}</div>
     </li>
     <li id="current" class="sent">{{typedMsg}}</li>
 </ul>

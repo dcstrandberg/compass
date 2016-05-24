@@ -51,7 +51,7 @@ ul#list li {
     width: 250px;
     height: auto;
 
-    background-color: #ddbb99;
+    background-color: #cceeff;
     border: 1px solid navy;
     border-radius: 7px;
     
@@ -113,7 +113,7 @@ ul#list li div.sentTime {
     transition: background-color 0.3s;
 }
 #typeBox:focus {
-    background-color: #ffbb99;
+    background-color: #cceeff;
 }
 #submit {
     background-color: navy;
